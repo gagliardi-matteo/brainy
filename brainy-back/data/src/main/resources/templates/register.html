@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Registrazione Utente</title>
+    </head>
+    <body>
+        <p th:text="${error}"></p>
+        <h1>Registrazione Nuovo Utente</h1>
+        <form action="/register" method="post">
+            <label for="name">Nome:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <button type="submit">Registra</button>
+        </form>
+        <a href="/login">login</a>
+    </body>
+</html>
