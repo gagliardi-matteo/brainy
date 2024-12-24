@@ -11,7 +11,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist/brainy-front/browser /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN apk add --no-cache gettext
-EXPOSE 4200
+EXPOSE 80
 
 # Substituisce __PORT__ con il valore di $PORT
 CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
