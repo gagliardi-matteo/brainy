@@ -29,6 +29,7 @@ body { margin: 0; font-family: 'Poppins', sans-serif; }
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3em !important;
   }
   
   .card-header {
@@ -55,4 +56,11 @@ body { margin: 0; font-family: 'Poppins', sans-serif; }
     border-radius: 0.75rem;
     width: 0;
     transition: width 0.4s linear;
+  }
+
+  @media (max-width: 1024px) {
+    #skills p{
+      width: 80%;
+      margin-left: 10%;
+    }
   }

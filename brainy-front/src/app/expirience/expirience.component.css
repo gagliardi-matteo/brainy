@@ -52,12 +52,9 @@
     line-height: 1.5;
   }
   
-  @media (max-width: 768px) {
-    .timeline {
-      padding-left: 20px;
-    }
+  @media (max-width: 1024px) {
   
-    .timeline-dot {
-      left: -4px;
+    .timeline-item {
+      width: 80%;
     }
   }

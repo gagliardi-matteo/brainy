@@ -81,3 +81,14 @@
     color: rgb(75 85 99);
     font-size: 1.1rem;
   }
+
+  @media (max-width: 1024px) {
+    .about-section{
+      width: auto;
+      margin: 4em 10%;
+    }
+
+    #navigationButton{
+      display: none;
+    }
+  }

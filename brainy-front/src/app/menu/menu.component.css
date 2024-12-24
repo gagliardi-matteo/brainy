@@ -57,3 +57,14 @@
     font-size: .875rem;
     margin: 0 1.5rem;
   }
+
+  @media (max-width: 1024px) {
+    .navbar-nav {
+      text-align: center; /* Centra il testo */
+    }
+  
+    .nav-link {
+      padding: 10px; /* Aggiunge spazio tra le voci */
+      display: block; /* Ogni voce occupa l'intera riga */
+    }
+  }

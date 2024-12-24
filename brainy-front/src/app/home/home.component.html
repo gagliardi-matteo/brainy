@@ -9,7 +9,7 @@
       </p>
     </div>
 </div>
-<div class="about-section align-items-center justify-content-center" id="target-section">
+<div class="about-section d-flex flex-column align-items-left justify-content-center" id="target-section">
     <h1>About Me</h1>
     <p>
         I'm a passionate Full Stack Developer with expertise in building modern web applications. With a strong foundation in both frontend and backend technologies, I create seamless user experiences that solve real-world problems.<br /><br />
@@ -17,4 +17,4 @@
     </p>
 </div>
 <app-expirience></app-expirience>
-<button class="scroll-down-button" [style.transform]="'rotate(' + rotationAngle + 'deg)'" (click)="handleButtonClick()"><i class="fa-solid fa-arrow-down"></i></button>
+<button class="scroll-down-button" [style.transform]="'rotate(' + rotationAngle + 'deg)'" (click)="handleButtonClick()" id="navigationButton"><i class="fa-solid fa-arrow-down"></i></button>
