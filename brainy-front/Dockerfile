@@ -13,4 +13,5 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 RUN apk add --no-cache gettext
 
 # Substituisce __PORT__ con il valore di $PORT
-CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+#CMD ["/bin/sh", "-c", "envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
+CMD ["/bin/sh", "-c", "echo 'PORT is set to:' $PORT && envsubst < /etc/nginx/conf.d/default.conf > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"]
