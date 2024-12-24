@@ -1,0 +1,31 @@
+<div class="container my-5" id="skills">
+    <h2 class="text-center mb-4">Skills</h2>
+    <p>A comprehensive overview of my technical expertise and proficiency levels in various technologies and tools.</p>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let category of categories">
+        <div class="card shadow-sm mb-4">
+          <div class="card-header">
+            <h5 class="mb-0">{{ category.category }}</h5>
+          </div>
+          <div class="card-body">
+            <div class="skill-item mb-4" *ngFor="let skill of category.skills">
+              <h5 class="d-flex justify-content-between">
+                <span>{{ skill.name }}</span>
+                <span>{{ skill.percentage }}%</span>
+              </h5>
+              <div class="progress">
+                <div
+                  class="progress-bar"
+                  role="progressbar"
+                  [style.width.%]="skill.currentPercentage"
+                  [attr.aria-valuenow]="skill.currentPercentage"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

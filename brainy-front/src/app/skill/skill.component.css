@@ -1,0 +1,58 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Poppins', sans-serif; }
+
+
+
+
+
+/*Skills*/
+#skills{
+    margin-top: 9em !important;    
+    animation: fadeInDown 2s;
+  }
+
+  #skills h2{
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+
+  #skills p{
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;    
+    color: rgb(75 85 99);
+    margin-bottom: 5em;
+  }
+
+  .card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-header {
+    font-weight: bold;
+    background-color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1.2em;
+  }
+  
+  .skill-item h5 {
+    font-size: .9rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .progress {
+    height: .5rem;
+    background-color: #e9ecef;
+    border-radius: 0.75rem;
+  }
+  
+  .progress-bar {
+    background-color: rgb(138 154 91);
+    border-radius: 0.75rem;
+    width: 0;
+    transition: width 0.4s linear;
+  }

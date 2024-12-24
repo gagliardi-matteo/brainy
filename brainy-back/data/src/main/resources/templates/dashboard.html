@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <h1>Benvenuto!</h1>
+        <p>Nome: <span th:text="${name}"></span></p>
+        <p>Email: <span th:text="${email}"></span></p>
+        <div>
+            <h1>Inserisci i tuoi appunti</h1>
+            <form action="/api/tags/generate" method="post">
+                <label for="note">Appunti:</label><br>
+                <input type="text" id="note" name="note" required><br><br>
+                <button type="submit">Convalida</button>
+            </form>
+        </div>
+        <div th:if="${tags}" style="border: 1px solid #ccc; padding: 10px; margin-bottom: 20px;">
+            <h3>Tag Generati:</h3>
+            <ul>
+                <li th:each="tag : ${tags}" th:text="${tag}"></li>
+            </ul>
+        </div>
+        <a href="/logout">Logout</a>
+    </body>
+</html>

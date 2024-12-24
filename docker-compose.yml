@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:15
+    container_name: brainy-postgres-container
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: brainy
+      POSTGRES_DB: brainyDB
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  spring-backend:
+    build: ./brainy-back/data
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/brainyDB
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: brainy
+    depends_on:
+      - postgres
+
+  frontend:
+    build:
+      context: ./brainy-front
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+
+volumes:
+  postgres_data:

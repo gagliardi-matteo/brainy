@@ -1,0 +1,16 @@
+<p>note works!</p>
+<div class="note-container">
+    <h2>Aggiungi un Appunto</h2>
+    <form (ngSubmit)="onSubmit()" #noteForm="ngForm">
+        <div>
+            <label for="content">Contenuto</label>
+            <textarea
+                id="content"
+                [(ngModel)]="note"
+                name="content"
+                required
+            ></textarea>
+        </div>
+        <button type="submit" [disabled]="!noteForm.form.valid">Invia</button>
+    </form>
+</div>
