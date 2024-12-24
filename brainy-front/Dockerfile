@@ -8,6 +8,7 @@ RUN npm run build --prod
 
 # Step 2: Serve the app with Nginx
 FROM nginx:alpine
-COPY --from=build /app/dist/brainy-front /usr/share/nginx/html
-EXPOSE 80
+COPY --from=build /app/dist/brainy-front/browser /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 4200
 CMD ["nginx", "-g", "daemon off;"]
