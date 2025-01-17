@@ -24,27 +24,51 @@ export class SkillComponent {
 
   categories = [
     {
+      category: 'Soft Skills',
+      skills: [
+        { name: 'Leadership', percentage: 85, currentPercentage: 0 },
+        { name: 'Self Improvement', percentage: 90, currentPercentage: 0 },
+        { name: 'Problem Solving', percentage: 95, currentPercentage: 0 }
+      ]
+    },
+    {
+      category: 'Product Skills',
+      skills: [
+        { name: 'Product Strategy', percentage: 90, currentPercentage: 0 },
+        { name: 'Agile', percentage: 85, currentPercentage: 0 },
+        { name: 'User Research', percentage: 70, currentPercentage: 0 }
+      ]
+    },
+    {
       category: 'Frontend',
       skills: [
-        { name: 'HTML', percentage: 90, currentPercentage: 0 },
-        { name: 'CSS', percentage: 85, currentPercentage: 0 },
-        { name: 'JavaScript', percentage: 80, currentPercentage: 0 }
+        { name: 'AngularJs', percentage: 90, currentPercentage: 0 },
+        { name: 'Angular', percentage: 85, currentPercentage: 0 },
+        { name: 'React', percentage: 70, currentPercentage: 0 }
       ]
     },
     {
       category: 'Backend',
       skills: [
-        { name: 'Python', percentage: 70, currentPercentage: 0 },
-        { name: 'Spring Boot', percentage: 65, currentPercentage: 0 },
-        { name: 'Angular', percentage: 75, currentPercentage: 0 }
+        { name: 'RestFull APIs', percentage: 90, currentPercentage: 0 },
+        { name: 'Spring Boot', percentage: 90, currentPercentage: 0 },
+        { name: 'SQL', percentage: 98, currentPercentage: 0 }
       ]
     },
     {
-      category: 'Tools',
+      category: 'Programming Languages',
+      skills: [
+        { name: 'Java', percentage: 90, currentPercentage: 0 },
+        { name: 'JavaScript', percentage: 90, currentPercentage: 0 },
+        { name: 'TypeScript', percentage: 98, currentPercentage: 0 },
+      ]
+    },
+    {
+      category: 'Tools & Technologies',
       skills: [
         { name: 'Docker', percentage: 60, currentPercentage: 0 },
         { name: 'GitLab DevOps', percentage: 55, currentPercentage: 0 },
-        { name: 'Angular', percentage: 75, currentPercentage: 0 }
+        { name: 'GCP', percentage: 65, currentPercentage: 0 }
       ]
     }
   ];

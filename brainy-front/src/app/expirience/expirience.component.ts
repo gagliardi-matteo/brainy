@@ -12,13 +12,13 @@ export class ExpirienceComponent {
   experiences = [
     {
       title: 'Tech Lead',
-      date: 'Settembre 2024 - Presente',
-      description: 'Sviluppo API RESTful con Spring Boot e PostgreSQL.'
+      date: 'September 2024 - Today',
+      description: 'Led the design and development of scalable DEVOPS RESTful APIs on GCP environment, ensuring high performance and reliability. Mentored junior developers and oversaw the implementation of best coding practices.'
     },
     {
       title: 'Software Engineer',
-      date: 'Marzo 2022 - Settembre 2024',
-      description: 'Manutenzione e sviluppo di applicazioni legacy.'
+      date: 'March 2022 - September 2024',
+      description: 'Managed and enhanced legacy applications, implementing innovative solutions to improve system stability and performance. Collaborated with cross-functional teams to deliver software updates aligned with business objectives.'
     }
   ];
 
