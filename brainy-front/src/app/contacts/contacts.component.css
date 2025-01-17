@@ -5,7 +5,7 @@
     justify-content: center; /* Centra orizzontalmente il modulo */
     height: 100vh; /* Occupa l'intera altezza della finestra */
     padding: 2rem; /* Spazio interno per evitare bordi tagliati */
-    box-sizing: border-box; /* Assicura che il padding non influisca sull'altezza */
+    box-sizing: border-box; /* Assicura che il padding non influisca sull'altezza */    
   }
   
   /* Modulo di contatto */
@@ -17,6 +17,7 @@
     border-radius: 8px;
     background-color: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 2s;
   }
   
   /* Campi di input e pulsanti rimangono invariati */
