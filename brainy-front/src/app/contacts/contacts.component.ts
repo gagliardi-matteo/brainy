@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import emailjs from 'emailjs-com';
 import { FormsModule } from '@angular/forms';
-import { RecaptchaModule } from 'ng-recaptcha';
 
 @Component({
   selector: 'app-contacts',
-  imports: [FormsModule, RecaptchaModule],
+  imports: [FormsModule],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.css'
 })
