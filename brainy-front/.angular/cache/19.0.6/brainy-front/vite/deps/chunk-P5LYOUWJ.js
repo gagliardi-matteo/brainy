@@ -1,6 +1,6 @@
 import {
   getDOM
-} from "./chunk-A54F3Y2Z.js";
+} from "./chunk-PRIBDO5C.js";
 import {
   ChangeDetectorRef,
   Directive,
@@ -45,7 +45,7 @@ import {
   ɵɵdirectiveInject,
   ɵɵgetInheritedFactory,
   ɵɵlistener
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import {
   __spreadProps,
   __spreadValues
@@ -967,7 +967,7 @@ var AbstractControlDirective = class {
    * @usageNotes
    * For example, for the following `FormGroup`:
    *
-   * ```
+   * ```ts
    * form = new FormGroup({
    *   address: new FormGroup({ street: new FormControl() })
    * });
@@ -1000,7 +1000,7 @@ var AbstractControlDirective = class {
    * @usageNotes
    * For example, for the following `FormGroup`:
    *
-   * ```
+   * ```ts
    * form = new FormGroup({
    *   address: new FormGroup({ street: new FormControl() })
    * });
@@ -2167,7 +2167,7 @@ var AbstractControl = class {
    * @usageNotes
    * For example, for the following `FormGroup`:
    *
-   * ```
+   * ```ts
    * form = new FormGroup({
    *   address: new FormGroup({ street: new FormControl() })
    * });
@@ -2198,7 +2198,7 @@ var AbstractControl = class {
    * @usageNotes
    * For example, for the following `FormGroup`:
    *
-   * ```
+   * ```ts
    * form = new FormGroup({
    *   address: new FormGroup({ street: new FormControl() })
    * });
@@ -2417,7 +2417,7 @@ var FormGroup = class extends AbstractControl {
    * @usageNotes
    * ### Set the complete value for the form group
    *
-   * ```
+   * ```ts
    * const form = new FormGroup({
    *   first: new FormControl(),
    *   last: new FormControl()
@@ -2466,7 +2466,7 @@ var FormGroup = class extends AbstractControl {
    * @usageNotes
    * ### Patch the value for a form group
    *
-   * ```
+   * ```ts
    * const form = new FormGroup({
    *    first: new FormControl(),
    *    last: new FormControl()
@@ -2546,7 +2546,7 @@ var FormGroup = class extends AbstractControl {
    *
    * ### Reset the form group values and disabled status
    *
-   * ```
+   * ```ts
    * const form = new FormGroup({
    *   first: new FormControl('first name'),
    *   last: new FormControl('last name')
@@ -2663,7 +2663,7 @@ var isFormGroup = (control) => control instanceof FormGroup;
 var FormRecord = class extends FormGroup {
 };
 var isFormRecord = (control) => control instanceof FormRecord;
-var CALL_SET_DISABLED_STATE = new InjectionToken("CallSetDisabledState", {
+var CALL_SET_DISABLED_STATE = new InjectionToken(typeof ngDevMode === "undefined" || ngDevMode ? "CallSetDisabledState" : "", {
   providedIn: "root",
   factory: () => setDisabledStateDefault
 });
@@ -6236,7 +6236,7 @@ var FormArray = class extends AbstractControl {
    * @usageNotes
    * ### Set the values for the controls in the form array
    *
-   * ```
+   * ```ts
    * const arr = new FormArray([
    *   new FormControl(),
    *   new FormControl()
@@ -6281,7 +6281,7 @@ var FormArray = class extends AbstractControl {
    * @usageNotes
    * ### Patch the values for controls in a form array
    *
-   * ```
+   * ```ts
    * const arr = new FormArray([
    *    new FormControl(),
    *    new FormControl()
@@ -6338,7 +6338,7 @@ var FormArray = class extends AbstractControl {
    *
    * ### Reset the values in a form array and the disabled status for the first control
    *
-   * ```
+   * ```ts
    * arr.reset([
    *   {value: 'name', disabled: true},
    *   'last'
@@ -6714,7 +6714,7 @@ var UntypedFormBuilder = class _UntypedFormBuilder extends FormBuilder {
     }]
   }], null, null);
 })();
-var VERSION = new Version("19.0.5");
+var VERSION = new Version("19.1.1");
 var FormsModule = class _FormsModule {
   /**
    * @description
@@ -6868,9 +6868,9 @@ export {
 
 @angular/forms/fesm2022/forms.mjs:
   (**
-   * @license Angular v19.0.5
+   * @license Angular v19.1.1
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-VKCQV5SB.js.map
+//# sourceMappingURL=chunk-P5LYOUWJ.js.map

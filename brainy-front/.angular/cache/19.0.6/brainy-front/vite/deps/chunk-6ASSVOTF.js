@@ -1,7 +1,7 @@
 import {
   DOCUMENT,
   isPlatformBrowser
-} from "./chunk-A54F3Y2Z.js";
+} from "./chunk-PRIBDO5C.js";
 import {
   ANIMATION_MODULE_TYPE,
   APP_ID,
@@ -79,7 +79,7 @@ import {
   ɵɵtext,
   ɵɵtextInterpolate1,
   ɵɵviewQuery
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import {
   __spreadProps,
   __spreadValues
@@ -3433,7 +3433,7 @@ function MatOption_Conditional_6_Template(rf, ctx) {
 }
 var _c5 = ["mat-internal-form-field", ""];
 var _c6 = ["*"];
-var VERSION = new Version("19.0.4");
+var VERSION2 = new Version("19.1.0");
 var MATERIAL_SANITY_CHECKS = new InjectionToken("mat-sanity-checks", {
   providedIn: "root",
   factory: () => true
@@ -5481,4 +5481,4 @@ export {
   MatPseudoCheckboxModule,
   MatRippleLoader
 };
-//# sourceMappingURL=chunk-5HH3YB6A.js.map
+//# sourceMappingURL=chunk-6ASSVOTF.js.map

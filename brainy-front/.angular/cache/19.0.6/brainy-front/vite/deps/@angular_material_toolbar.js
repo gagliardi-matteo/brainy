@@ -1,10 +1,10 @@
 import {
   MatCommonModule,
   Platform
-} from "./chunk-5HH3YB6A.js";
+} from "./chunk-6ASSVOTF.js";
 import {
   DOCUMENT
-} from "./chunk-A54F3Y2Z.js";
+} from "./chunk-PRIBDO5C.js";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -27,7 +27,7 @@ import {
   ɵɵprojection,
   ɵɵprojectionDef,
   ɵɵqueryRefresh
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import "./chunk-WDMUDEB6.js";
 
 // node_modules/@angular/material/fesm2022/toolbar.mjs
@@ -63,10 +63,10 @@ var MatToolbar = class _MatToolbar {
   // TODO: should be typed as `ThemePalette` but internal apps pass in arbitrary strings.
   /**
    * Theme color of the toolbar. This API is supported in M2 themes only, it has
-   * no effect in M3 themes.
+   * no effect in M3 themes. For color customization in M3, see https://material.angular.io/components/toolbar/styling.
    *
    * For information on applying color variants in M3, see
-   * https://material.angular.io/guide/theming#using-component-color-variants.
+   * https://material.angular.io/guide/material-2-theming#optional-add-backwards-compatibility-styles-for-color-variants
    */
   color;
   /** Reference to all toolbar row elements that have been projected. */

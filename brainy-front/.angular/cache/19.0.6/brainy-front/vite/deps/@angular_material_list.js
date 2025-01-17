@@ -1,6 +1,6 @@
 import {
   NG_VALUE_ACCESSOR
-} from "./chunk-VKCQV5SB.js";
+} from "./chunk-P5LYOUWJ.js";
 import {
   A,
   CdkObserveContent,
@@ -20,10 +20,10 @@ import {
   coerceBooleanProperty,
   coerceNumberProperty,
   hasModifierKey
-} from "./chunk-5HH3YB6A.js";
+} from "./chunk-6ASSVOTF.js";
 import {
   NgTemplateOutlet
-} from "./chunk-A54F3Y2Z.js";
+} from "./chunk-PRIBDO5C.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -83,7 +83,7 @@ import {
   ɵɵtemplate,
   ɵɵtemplateRefExtractor,
   ɵɵviewQuery
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import "./chunk-WDMUDEB6.js";
 
 // node_modules/@angular/material/fesm2022/divider.mjs
@@ -1326,10 +1326,11 @@ var MatListOption = class _MatListOption extends MatListItemBase {
   }
   /**
    * Theme color of the list option. This sets the color of the checkbox/radio.
-   * This API is supported in M2 themes only, it has no effect in M3 themes.
+   * This API is supported in M2 themes only, it has no effect in M3 themes. For color customization
+   * in M3, see https://material.angular.io/components/list/styling.
    *
    * For information on applying color variants in M3, see
-   * https://material.angular.io/guide/theming#using-component-color-variants.
+   * https://material.angular.io/guide/material-2-theming#optional-add-backwards-compatibility-styles-for-color-variants
    */
   get color() {
     return this._color || this._selectionList.color;
@@ -1863,10 +1864,10 @@ var MatSelectionList = class _MatSelectionList extends MatListBase {
   /**
    * Theme color of the selection list. This sets the checkbox color for all
    * list options. This API is supported in M2 themes only, it has no effect in
-   * M3 themes.
+   * M3 themes. For color customization in M3, see https://material.angular.io/components/list/styling.
    *
    * For information on applying color variants in M3, see
-   * https://material.angular.io/guide/theming#using-component-color-variants.
+   * https://material.angular.io/guide/material-2-theming#optional-add-backwards-compatibility-styles-for-color-variants
    */
   color = "accent";
   /**

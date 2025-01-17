@@ -1,0 +1,49 @@
+/* Contenitore principale della pagina */
+.page-container {
+    display: flex; /* Utilizza flexbox */
+    align-items: center; /* Centra verticalmente il modulo */
+    justify-content: center; /* Centra orizzontalmente il modulo */
+    height: 100vh; /* Occupa l'intera altezza della finestra */
+    padding: 2rem; /* Spazio interno per evitare bordi tagliati */
+    box-sizing: border-box; /* Assicura che il padding non influisca sull'altezza */
+  }
+  
+  /* Modulo di contatto */
+  form {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Campi di input e pulsanti rimangono invariati */
+  form input,
+  form textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+  }
+  
+  form button.btn-submit {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  form button.btn-submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.02);
+  }
+  

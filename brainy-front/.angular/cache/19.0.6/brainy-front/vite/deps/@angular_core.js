@@ -203,7 +203,7 @@ import {
   getAsyncClassMetadataFn,
   getClosestComponentName,
   getDebugNode,
-  getDeferBlocks,
+  getDeferBlocks$1,
   getDirectives,
   getHostElement,
   getInjectableDef,
@@ -303,6 +303,7 @@ import {
   ɵɵNgOnChangesFeature,
   ɵɵProvidersFeature,
   ɵɵadvance,
+  ɵɵattachSourceLocations,
   ɵɵattribute,
   ɵɵattributeInterpolate1,
   ɵɵattributeInterpolate2,
@@ -493,7 +494,7 @@ import {
   ɵɵvalidateIframeAttribute,
   ɵɵviewQuery,
   ɵɵviewQuerySignal
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import "./chunk-WDMUDEB6.js";
 export {
   ANIMATION_MODULE_TYPE,
@@ -733,7 +734,7 @@ export {
   getAsyncClassMetadataFn as ɵgetAsyncClassMetadataFn,
   getClosestComponentName as ɵgetClosestComponentName,
   getDebugNode as ɵgetDebugNode,
-  getDeferBlocks as ɵgetDeferBlocks,
+  getDeferBlocks$1 as ɵgetDeferBlocks,
   getDirectives as ɵgetDirectives,
   getHostElement as ɵgetHostElement,
   getInjectableDef as ɵgetInjectableDef,
@@ -801,6 +802,7 @@ export {
   ɵɵNgOnChangesFeature,
   ɵɵProvidersFeature,
   ɵɵadvance,
+  ɵɵattachSourceLocations,
   ɵɵattribute,
   ɵɵattributeInterpolate1,
   ɵɵattributeInterpolate2,

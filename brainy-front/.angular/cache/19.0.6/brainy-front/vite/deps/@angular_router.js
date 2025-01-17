@@ -1,7 +1,7 @@
 import {
   Title
-} from "./chunk-OD7FZKMK.js";
-import "./chunk-GHDCB3FU.js";
+} from "./chunk-P5HF6AZU.js";
+import "./chunk-MADLZTLG.js";
 import {
   DOCUMENT,
   HashLocationStrategy,
@@ -10,7 +10,7 @@ import {
   LocationStrategy,
   PathLocationStrategy,
   ViewportScroller
-} from "./chunk-A54F3Y2Z.js";
+} from "./chunk-PRIBDO5C.js";
 import {
   APP_BOOTSTRAP_LISTENER,
   APP_INITIALIZER,
@@ -74,7 +74,6 @@ import {
   last,
   makeEnvironmentProviders,
   map,
-  mapTo,
   mergeAll,
   mergeMap,
   of,
@@ -111,7 +110,7 @@ import {
   ɵɵloadQuery,
   ɵɵqueryRefresh,
   ɵɵsanitizeUrlOrResourceUrl
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import {
   __spreadProps,
   __spreadValues
@@ -3252,7 +3251,7 @@ function resolveNode(resolve, futureARS, futureRSS, injector) {
       throw redirectingNavigationError(new DefaultUrlSerializer(), value);
     }
     data[key] = value;
-  }))), takeLast(1), mapTo(data), catchError((e) => isEmptyError(e) ? EMPTY : throwError(e)));
+  }))), takeLast(1), map(() => data), catchError((e) => isEmptyError(e) ? EMPTY : throwError(e)));
 }
 function getResolver(injectionToken, futureARS, futureRSS, injector) {
   const closestInjector = getClosestRouteInjector(futureARS) ?? injector;
@@ -3354,6 +3353,7 @@ var ɵEmptyOutletComponent = class _ɵEmptyOutletComponent {
   static ɵcmp = ɵɵdefineComponent({
     type: _ɵEmptyOutletComponent,
     selectors: [["ng-component"]],
+    exportAs: ["emptyRouterOutlet"],
     decls: 1,
     vars: 0,
     template: function _EmptyOutletComponent_Template(rf, ctx) {
@@ -3369,8 +3369,10 @@ var ɵEmptyOutletComponent = class _ɵEmptyOutletComponent {
   (typeof ngDevMode === "undefined" || ngDevMode) && setClassMetadata(ɵEmptyOutletComponent, [{
     type: Component,
     args: [{
-      template: `<router-outlet></router-outlet>`,
-      imports: [RouterOutlet]
+      template: `<router-outlet/>`,
+      imports: [RouterOutlet],
+      // Used to avoid component ID collisions with user code.
+      exportAs: "emptyRouterOutlet"
     }]
   }], null, null);
 })();
@@ -4205,20 +4207,17 @@ var HistoryStateManager = class _HistoryStateManager extends StateManager {
     }]
   }], null, null);
 })();
-var NavigationResult;
-(function(NavigationResult2) {
-  NavigationResult2[NavigationResult2["COMPLETE"] = 0] = "COMPLETE";
-  NavigationResult2[NavigationResult2["FAILED"] = 1] = "FAILED";
-  NavigationResult2[NavigationResult2["REDIRECTING"] = 2] = "REDIRECTING";
-})(NavigationResult || (NavigationResult = {}));
 function afterNextNavigation(router, action) {
   router.events.pipe(filter((e) => e instanceof NavigationEnd || e instanceof NavigationCancel || e instanceof NavigationError || e instanceof NavigationSkipped), map((e) => {
     if (e instanceof NavigationEnd || e instanceof NavigationSkipped) {
-      return NavigationResult.COMPLETE;
+      return 0;
     }
     const redirecting = e instanceof NavigationCancel ? e.code === NavigationCancellationCode.Redirect || e.code === NavigationCancellationCode.SupersededByNewNavigation : false;
-    return redirecting ? NavigationResult.REDIRECTING : NavigationResult.FAILED;
-  }), filter((result) => result !== NavigationResult.REDIRECTING), take(1)).subscribe(() => {
+    return redirecting ? 2 : 1;
+  }), filter(
+    (result) => result !== 2
+    /* NavigationResult.REDIRECTING */
+  ), take(1)).subscribe(() => {
     action();
   });
 }
@@ -4430,7 +4429,7 @@ var Router = class _Router {
    *
    * @usageNotes
    *
-   * ```
+   * ```ts
    * router.resetConfig([
    *  { path: 'team/:id', component: TeamCmp, children: [
    *    { path: 'simple', component: SimpleCmp },
@@ -4450,6 +4449,7 @@ var Router = class _Router {
   }
   /** Disposes of the router. */
   dispose() {
+    this._events.unsubscribe();
     this.navigationTransitions.complete();
     if (this.nonRouterCurrentEntryChangeSubscription) {
       this.nonRouterCurrentEntryChangeSubscription.unsubscribe();
@@ -4555,7 +4555,7 @@ var Router = class _Router {
    *
    * The following calls request navigation to an absolute path.
    *
-   * ```
+   * ```ts
    * router.navigateByUrl("/team/33/user/11");
    *
    * // Navigate without updating the URL
@@ -4592,7 +4592,7 @@ var Router = class _Router {
    *
    * The following calls request navigation to a dynamic route path relative to the current URL.
    *
-   * ```
+   * ```ts
    * router.navigate(['team', 33, 'user', 11], {relativeTo: route});
    *
    * // Navigate without updating the URL, overriding the default behavior
@@ -5078,7 +5078,7 @@ var RouterLinkActive = class _RouterLinkActive {
    * true  -> Route is active
    * false -> Route is inactive
    *
-   * ```
+   * ```html
    * <a
    *  routerLink="/user/bob"
    *  routerLinkActive="active-link"
@@ -5719,7 +5719,7 @@ var RouterModule = class _RouterModule {
    *
    * When registering the NgModule at the root, import as follows:
    *
-   * ```
+   * ```ts
    * @NgModule({
    *   imports: [RouterModule.forRoot(ROUTES)]
    * })
@@ -5756,7 +5756,7 @@ var RouterModule = class _RouterModule {
    * without creating a new Router service.
    * When registering for submodules and lazy-loaded submodules, create the NgModule as follows:
    *
-   * ```
+   * ```ts
    * @NgModule({
    *   imports: [RouterModule.forChild(ROUTES)]
    * })
@@ -5872,7 +5872,7 @@ function mapToCanDeactivate(providers) {
 function mapToResolve(provider) {
   return (...params) => inject(provider).resolve(...params);
 }
-var VERSION = new Version("19.0.5");
+var VERSION = new Version("19.1.1");
 function getLoadedRoutes(route) {
   return route._loadedRoutes;
 }
@@ -5961,7 +5961,7 @@ export {
 
 @angular/router/fesm2022/router.mjs:
   (**
-   * @license Angular v19.0.5
+   * @license Angular v19.1.1
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)

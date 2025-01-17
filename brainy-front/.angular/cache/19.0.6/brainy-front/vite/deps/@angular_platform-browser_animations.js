@@ -6,15 +6,15 @@ import {
   sequence,
   style,
   ɵPRE_STYLE
-} from "./chunk-UGX2FKK4.js";
+} from "./chunk-F4NU4ZST.js";
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-OD7FZKMK.js";
-import "./chunk-GHDCB3FU.js";
+} from "./chunk-P5HF6AZU.js";
+import "./chunk-MADLZTLG.js";
 import {
   DOCUMENT
-} from "./chunk-A54F3Y2Z.js";
+} from "./chunk-PRIBDO5C.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -29,7 +29,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import {
   __objRest,
   __spreadValues
@@ -576,10 +576,10 @@ function createListOfWarnings(warnings) {
   return `${LINE_START2}${warnings.filter(Boolean).map((warning) => warning).join(LINE_START2)}`;
 }
 function warnTriggerBuild(name, warnings) {
-  (typeof ngDevMode === "undefined" || ngDevMode) && console.warn(`The animation trigger "${name}" has built with the following warnings:${createListOfWarnings(warnings)}`);
+  console.warn(`The animation trigger "${name}" has built with the following warnings:${createListOfWarnings(warnings)}`);
 }
 function warnRegister(warnings) {
-  (typeof ngDevMode === "undefined" || ngDevMode) && console.warn(`Animation built with the following warnings:${createListOfWarnings(warnings)}`);
+  console.warn(`Animation built with the following warnings:${createListOfWarnings(warnings)}`);
 }
 function pushUnrecognizedPropertiesWarning(warnings, props) {
   if (props.length) {
@@ -2004,8 +2004,10 @@ var TimelineAnimationEngine = class {
     if (errors.length) {
       throw registerFailed(errors);
     } else {
-      if (warnings.length) {
-        warnRegister(warnings);
+      if (typeof ngDevMode === "undefined" || ngDevMode) {
+        if (warnings.length) {
+          warnRegister(warnings);
+        }
       }
       this._animations.set(id, ast);
     }
@@ -3430,8 +3432,10 @@ var AnimationEngine = class {
       if (errors.length) {
         throw triggerBuildFailed(name, errors);
       }
-      if (warnings.length) {
-        warnTriggerBuild(name, warnings);
+      if (typeof ngDevMode === "undefined" || ngDevMode) {
+        if (warnings.length) {
+          warnTriggerBuild(name, warnings);
+        }
       }
       trigger = buildTrigger(name, ast, this._normalizer);
       this._triggerCache[cacheKey] = trigger;
@@ -3873,8 +3877,8 @@ var BaseAnimationRenderer = class {
   setValue(node, value) {
     this.delegate.setValue(node, value);
   }
-  listen(target, eventName, callback) {
-    return this.delegate.listen(target, eventName, callback);
+  listen(target, eventName, callback, options) {
+    return this.delegate.listen(target, eventName, callback, options);
   }
   disableAnimations(element, value) {
     this.engine.disableAnimations(element, value);
@@ -3899,7 +3903,7 @@ var AnimationRenderer = class extends BaseAnimationRenderer {
       this.delegate.setProperty(el, name, value);
     }
   }
-  listen(target, eventName, callback) {
+  listen(target, eventName, callback, options) {
     if (eventName.charAt(0) == ANIMATION_PREFIX) {
       const element = resolveElementFromTarget(target);
       let name = eventName.slice(1);
@@ -3912,7 +3916,7 @@ var AnimationRenderer = class extends BaseAnimationRenderer {
         this.factory.scheduleListenerCallback(countId, callback, event);
       });
     }
-    return this.delegate.listen(target, eventName, callback);
+    return this.delegate.listen(target, eventName, callback, options);
   }
 };
 function resolveElementFromTarget(target) {
@@ -4024,6 +4028,13 @@ var AnimationRendererFactory = class {
   whenRenderingDone() {
     return this.engine.whenRenderingDone();
   }
+  /**
+   * Used during HMR to clear any cached data about a component.
+   * @param componentId ID of the component that is being replaced.
+   */
+  componentReplaced(componentId) {
+    this.delegate.componentReplaced?.(componentId);
+  }
 };
 
 // node_modules/@angular/platform-browser/fesm2022/animations.mjs
@@ -4101,7 +4112,7 @@ var BrowserAnimationsModule = class _BrowserAnimationsModule {
    * @usageNotes
    * When registering the `BrowserAnimationsModule`, you can use the `withConfig`
    * function as follows:
-   * ```
+   * ```ts
    * @NgModule({
    *   imports: [BrowserAnimationsModule.withConfig(config)]
    * })
@@ -4176,14 +4187,14 @@ export {
 
 @angular/animations/fesm2022/browser.mjs:
   (**
-   * @license Angular v19.0.5
+   * @license Angular v19.1.1
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)
 
 @angular/platform-browser/fesm2022/animations.mjs:
   (**
-   * @license Angular v19.0.5
+   * @license Angular v19.1.1
    * (c) 2010-2024 Google LLC. https://angular.io/
    * License: MIT
    *)

@@ -3,11 +3,10 @@ import {
   MatCommonModule,
   MatRippleLoader,
   MatRippleModule,
-  Platform,
   _CdkPrivateStyleLoader,
   _StructuralStylesLoader
-} from "./chunk-5HH3YB6A.js";
-import "./chunk-A54F3Y2Z.js";
+} from "./chunk-6ASSVOTF.js";
+import "./chunk-PRIBDO5C.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -39,7 +38,7 @@ import {
   ɵɵgetInheritedFactory,
   ɵɵprojection,
   ɵɵprojectionDef
-} from "./chunk-HMGVPISB.js";
+} from "./chunk-BOCKIFUH.js";
 import {
   __spreadProps,
   __spreadValues
@@ -97,7 +96,6 @@ var HOST_SELECTOR_MDC_CLASS_PAIR = [{
 }];
 var MatButtonBase = class _MatButtonBase {
   _elementRef = inject(ElementRef);
-  _platform = inject(Platform);
   _ngZone = inject(NgZone);
   _animationMode = inject(ANIMATION_MODULE_TYPE, {
     optional: true
@@ -112,10 +110,10 @@ var MatButtonBase = class _MatButtonBase {
   _isFab = false;
   /**
    * Theme color of the button. This API is supported in M2 themes only, it has
-   * no effect in M3 themes.
+   * no effect in M3 themes. For color customization in M3, see https://material.angular.io/components/button/styling.
    *
    * For information on applying color variants in M3, see
-   * https://material.angular.io/guide/theming#using-component-color-variants.
+   * https://material.angular.io/guide/material-2-theming#optional-add-backwards-compatibility-styles-for-color-variants
    */
   color;
   /** Whether the ripple effect is disabled or not. */
